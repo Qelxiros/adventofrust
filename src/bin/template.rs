@@ -1,6 +1,7 @@
 use std::fs;
 
 use anyhow::Result;
+use itertools::Itertools;
 
 fn part1() -> Result<()> {
     let input = fs::read_to_string("/home/jeremy/github/adventofrust/input/%DAY%")?;
