@@ -5,7 +5,6 @@ use std::{
 
 use anyhow::Result;
 use itertools::Itertools;
-use rayon::iter::{IntoParallelIterator, ParallelIterator};
 use regex::Regex;
 
 fn part1(len: usize, v: Option<Vec<isize>>) -> usize {

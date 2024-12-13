@@ -5,7 +5,7 @@ use itertools::Itertools;
 use regex::Regex;
 
 fn part1() -> Result<()> {
-    let input = include_str!("/home/jeremy/github/adventofrust/input/09_test");
+    let input = include_str!("/home/jeremy/github/adventofrust/input/09");
 
     let mut file = true;
     let mut idx = 0;
