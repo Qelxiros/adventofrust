@@ -1,8 +1,7 @@
-use std::{collections::HashSet, io::stdin, thread::sleep, time::Duration};
+use std::collections::HashSet;
 
-use adventofrust::utils::integers;
+use adventofrust::utils::*;
 use itertools::Itertools;
-use num::traits::Euclid;
 use regex::Regex;
 
 fn part1() {
@@ -102,5 +101,5 @@ fn part2() {
 
 fn main() {
     part1();
-    part2();
+    // part2();
 }

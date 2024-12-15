@@ -99,7 +99,7 @@ fn shortest_path(goal: (usize, usize), A: (usize, usize), B: (usize, usize)) -> 
 }
 
 fn part1() {
-    let input = include_str!("/home/jeremy/github/adventofrust/input/13_test");
+    let input = include_str!("/home/jeremy/github/adventofrust/input/13");
 
     let re = Regex::new(r"\d+").unwrap();
 
