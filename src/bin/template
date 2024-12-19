@@ -1,15 +1,25 @@
+#![feature(let_chains)]
+
+use std::collections::*;
+
 use itertools::Itertools;
 use regex::Regex;
 
-fn part1() {
-    let input = include_str!("/home/jeremy/github/adventofrust/input/%DAY%");
+use adventofrust::utils::*;
+
+fn part1() -> String {
+    let input = include_str!("../../input/%DAY%");
+
+    String::new()
 }
 
-fn part2() {
-    let input = include_str!("/home/jeremy/github/adventofrust/input/%DAY%");
+fn part2() -> String {
+    let input = include_str!("../../input/%DAY%");
+
+    String::new()
 }
 
 fn main() {
-    part1();
-    part2();
+    println!("{}", part1());
+    println!("{}", part2());
 }

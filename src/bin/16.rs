@@ -39,12 +39,11 @@ const DIRS: [(isize, isize); 4] = [(0, 1), (1, 0), (0, -1), (-1, 0)];
 fn part1() {
     let input = include_str!("/home/jeremy/github/adventofrust/input/16");
 
-    let (grid, Some(idx)) = grid_idx(input, 'S') else {
+    let (grid, Some(indices)) = grid_idx(input, ['S', 'E']) else {
         panic!()
     };
-    let (_, Some(end_idx)) = grid_idx(input, 'E') else {
-        panic!()
-    };
+    let idx = indices[0];
+    let end_idx = indices[1];
 
     let mut q = BinaryHeap::new();
     let mut seen = HashSet::new();
@@ -91,12 +90,11 @@ fn part1() {
 fn part2() {
     let input = include_str!("/home/jeremy/github/adventofrust/input/16");
 
-    let (grid, Some(idx)) = grid_idx(input, 'S') else {
+    let (grid, Some(indices)) = grid_idx(input, ['S', 'E']) else {
         panic!()
     };
-    let (_, Some(end_idx)) = grid_idx(input, 'E') else {
-        panic!()
-    };
+    let idx = indices[0];
+    let end_idx = indices[1];
 
     let mut q = BinaryHeap::new();
     let mut pred = HashMap::<State, Vec<State>>::new();
