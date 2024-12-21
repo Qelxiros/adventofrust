@@ -1,6 +1,6 @@
 #![feature(let_chains)]
 
-use std::collections::*;
+use std::{collections::*, fmt::Display};
 
 use itertools::Itertools;
 use regex::Regex;
@@ -9,19 +9,15 @@ use adventofrust::utils::*;
 
 const DIRS: [(isize, isize); 4] = [(0, 1), (1, 0), (0, -1), (-1, 0)];
 
-fn part1() -> String {
-    let input = include_str!("../../input/%DAY%");
-
+fn part1(input: &str) -> impl Display {
     String::new()
 }
 
-fn part2() -> String {
-    let input = include_str!("../../input/%DAY%");
-
+fn part2(input: &str) -> impl Display {
     String::new()
 }
 
 fn main() {
-    println!("{}", part1());
-    println!("{}", part2());
+    println!("{}", part1(include_str!("../../input/%DAY%")));
+    println!("{}", part2(include_str!("../../input/%DAY%")));
 }
