@@ -7,6 +7,7 @@ use std::{
 };
 
 use common::utils::grid_idx;
+use itertools::Itertools;
 
 #[derive(Copy, Clone, Eq, PartialEq, Debug, Hash)]
 struct State {
@@ -38,9 +39,8 @@ const DIRS: [(isize, isize); 4] = [(0, 1), (1, 0), (0, -1), (-1, 0)];
 fn part1() -> impl Debug {
     let input = include_str!("../../input/16");
 
-    let (grid, Some(indices)) = grid_idx(input, ['S', 'E']) else {
-        panic!()
-    };
+    let (grid, indices) = grid_idx(input, &['S', 'E']);
+    let indices = indices.into_iter().map(Option::unwrap).collect_vec();
     let idx = indices[0];
     let end_idx = indices[1];
 
@@ -91,9 +91,8 @@ fn part1() -> impl Debug {
 fn part2() -> impl Debug {
     let input = include_str!("../../input/16");
 
-    let (grid, Some(indices)) = grid_idx(input, ['S', 'E']) else {
-        panic!()
-    };
+    let (grid, indices) = grid_idx(input, &['S', 'E']);
+    let indices = indices.into_iter().map(Option::unwrap).collect_vec();
     let idx = indices[0];
     let end_idx = indices[1];
 

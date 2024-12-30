@@ -8,10 +8,10 @@ use itertools::Itertools;
 const DIRS: [(isize, isize); 4] = [(0, 1), (1, 0), (0, -1), (-1, 0)];
 
 fn part1(input: &str) -> impl Debug {
-    let (grid, indices) = grid_idx(input, ['S', 'E']);
+    let (grid, indices) = grid_idx(input, &['S', 'E']);
     let indices = indices
-        .unwrap()
         .into_iter()
+        .map(Option::unwrap)
         .map(|(a, b)| (a as isize, b as isize))
         .collect_vec();
 
@@ -65,10 +65,10 @@ fn cheat_neighbors() -> impl Iterator<Item = (isize, isize)> {
 }
 
 fn part2(input: &str) -> impl Debug {
-    let (grid, indices) = grid_idx(input, ['S', 'E']);
+    let (grid, indices) = grid_idx(input, &['S', 'E']);
     let indices = indices
-        .unwrap()
         .into_iter()
+        .map(Option::unwrap)
         .map(|(a, b)| (a as isize, b as isize))
         .collect_vec();
 

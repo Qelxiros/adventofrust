@@ -2,12 +2,11 @@
 
 use std::{collections::*, fmt::Debug};
 
+use common::utils::*;
 use itertools::Itertools;
 use regex::Regex;
 
-use common::utils::*;
-
-const DIRS: [(isize, isize); 4] = [(0, 1), (1, 0), (0, -1), (-1, 0)];
+const DIRS: [(isize, isize); 4] = [(-1, 0), (0, 1), (1, 0), (0, -1)];
 
 fn part1(input: &str) -> impl Debug {}
 
